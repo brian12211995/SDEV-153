@@ -1,3 +1,6 @@
+/* =========================================================
+   GLOBAL RESET + BASE
+   ========================================================= */
 *,
 *::before,
 *::after {
@@ -12,7 +15,19 @@ body {
   background-color: #f5f5f5;
 }
 
-/* Skip link */
+/* Better keyboard focus visibility (accessibility) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   SKIP LINK (ACCESSIBILITY)
+   ========================================================= */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -28,7 +43,9 @@ body {
   top: 0.5rem;
 }
 
-/* Header */
+/* =========================================================
+   HEADER + NAV
+   ========================================================= */
 .site-header {
   display: flex;
   align-items: center;
@@ -65,12 +82,20 @@ body {
   font-weight: 500;
 }
 
-.site-nav a:focus,
-.site-nav a:hover {
+.site-nav a:hover,
+.site-nav a:focus {
   text-decoration: underline;
 }
 
-/* Layout helpers */
+/* Highlight the active page link (use aria-current="page" in HTML) */
+.site-nav a[aria-current="page"] {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+/* =========================================================
+   LAYOUT HELPERS
+   ========================================================= */
 .section {
   padding: 3rem 5vw;
 }
@@ -99,7 +124,9 @@ body {
   margin-bottom: 0.75rem;
 }
 
-/* Cards / grids */
+/* =========================================================
+   CARDS / GRIDS
+   ========================================================= */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -121,7 +148,9 @@ body {
   padding-left: 1.2rem;
 }
 
-/* Buttons / links styled as buttons */
+/* =========================================================
+   BUTTON-LIKE LINKS
+   ========================================================= */
 .btn-link {
   display: inline-block;
   margin-top: 0.75rem;
@@ -133,6 +162,7 @@ body {
   font-weight: 600;
   color: #111827;
   background-color: #ffffff;
+  cursor: pointer;
 }
 
 .btn-link:hover,
@@ -141,19 +171,46 @@ body {
   color: #f9fafb;
 }
 
-/* Section headings */
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
 .section h2 {
   font-size: 1.75rem;
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-/* Projects */
+/* =========================================================
+   IMAGES (REQUIRED: 3+ images + alt text in HTML)
+   ========================================================= */
+.media-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
+.media-caption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* Optional: image grid for projects page */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* =========================================================
+   PROJECTS / TESTIMONIALS (your existing styles)
+   ========================================================= */
 .projects p {
   max-width: 36rem;
 }
 
-/* Testimonials */
 .testimonials blockquote {
   margin: 0 0 0.75rem 0;
   font-style: italic;
@@ -163,7 +220,9 @@ body {
   font-weight: 600;
 }
 
-/* Contact & Social */
+/* =========================================================
+   CONTACT & SOCIAL
+   ========================================================= */
 .contact-wrapper {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
@@ -204,7 +263,86 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Footer */
+/* =========================================================
+   TABLE (REQUIRED: at least one HTML table)
+   ========================================================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
+caption {
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+tbody tr:hover {
+  background-color: #f3f4f6;
+}
+
+/* =========================================================
+   FORM (REQUIRED: at least one HTML form + script processing)
+   ========================================================= */
+form {
+  margin-top: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font: inherit;
+  background-color: #ffffff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #111827;
+}
+
+/* status message from form processing script */
+#form-status {
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 .site-footer {
   padding: 1rem 5vw;
   text-align: center;
@@ -213,12 +351,18 @@ body {
   color: #e5e7eb;
 }
 
-/* Responsive tweaks */
+/* =========================================================
+   RESPONSIVE TWEAKS
+   ========================================================= */
 @media (max-width: 700px) {
   .site-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
+  }
+
+  .site-nav ul {
+    flex-wrap: wrap;
   }
 
   .contact-wrapper {
