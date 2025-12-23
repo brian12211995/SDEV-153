@@ -3,20 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kramer Innovation | Landscaping & Home Improvement</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Kramer Innovation provides local landscaping, home remodeling, and accessibility upgrades. Building dreams one project at a time.">
-
-  <!-- External CSS -->
+  <title>Kramer Innovation | Home</title>
+  <meta name="description" content="Kramer Innovation provides local landscaping, home remodeling, and inclusive design upgrades. Building dreams one project at a time.">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <!-- Skip link for accessibility -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- HEADER -->
   <header class="site-header">
     <div class="logo">
       <span class="logo-main">KRAMER</span>
@@ -25,97 +20,67 @@
 
     <nav class="site-nav" aria-label="Main navigation">
       <ul>
-        <li><a href="#main-content" aria-current="page">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Our Projects</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Our Projects</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- MAIN -->
   <main id="main-content">
-
-    <!-- HERO -->
     <section class="hero" aria-labelledby="hero-heading">
       <p class="hero-kicker">KRAMER INNOVATION</p>
-      <h1 id="hero-heading">Building dreams one project at a time</h1>
+      <h1 id="hero-heading">Building dreams one project at a time.</h1>
 
       <p>
-        Growing up in a small town taught me that hard work and reputation matter.
-        Kramer Innovation was built on helping neighbors improve their homes and
-        outdoor spaces with honest, reliable craftsmanship.
+        Growing up in a small town taught me that reputation matters. I take pride in helping
+        neighbors improve their homes and yards with honest work, clear communication, and results
+        that last.
+      </p>
+      <p>
+        Whether it’s lawn care, a deck project, a room refresh, or an accessibility upgrade,
+        I treat every job like it’s my own place.
       </p>
 
-      <p>
-        From lawn care and landscaping to decks, remodels, and accessibility upgrades,
-        every project is handled with pride and attention to detail.
-      </p>
+      <a class="btn-link" href="contact.html">Request a quote</a>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="section services" aria-labelledby="services-heading">
-      <h2 id="services-heading">Services</h2>
-
+    <section class="section" aria-labelledby="quick-links">
+      <h2 id="quick-links">Quick Links</h2>
       <div class="card-grid">
         <article class="card">
-          <h3>Landscaping</h3>
-          <ul>
-            <li>Lawn mowing and trimming</li>
-            <li>Mulch and flower bed installs</li>
-            <li>Seasonal clean-ups</li>
-          </ul>
+          <h3>See Our Services</h3>
+          <p>Landscaping, remodeling, and inclusive design.</p>
+          <a class="btn-link" href="services.html">Services</a>
         </article>
 
         <article class="card">
-          <h3>Home Remodeling</h3>
-          <ul>
-            <li>Deck and patio builds</li>
-            <li>Interior repairs</li>
-            <li>Basement refreshes</li>
-          </ul>
+          <h3>Recent Work</h3>
+          <p>Photos and examples of projects.</p>
+          <a class="btn-link" href="projects.html">Projects</a>
         </article>
 
         <article class="card">
-          <h3>Inclusive Design</h3>
-          <ul>
-            <li>Accessibility ramps</li>
-            <li>Handrails and safety upgrades</li>
-            <li>Low-maintenance designs</li>
-          </ul>
+          <h3>Leave a Message</h3>
+          <p>Use the contact form to tell us what you need.</p>
+          <a class="btn-link" href="contact.html">Contact</a>
         </article>
       </div>
-
-      <!-- REQUIRED TABLE -->
-      <table>
-        <caption>Sample Pricing Estimates</caption>
-        <thead>
-          <tr>
-            <th scope="col">Service</th>
-            <th scope="col">Typical Cost</th>
-            <th scope="col">Notes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Lawn Mowing</th>
-            <td>$40–$80</td>
-            <td>Based on yard size</td>
-          </tr>
-          <tr>
-            <th scope="row">Mulch Install</th>
-            <td>$200–$600</td>
-            <td>Includes materials</td>
-          </tr>
-          <tr>
-            <th scope="row">Deck Repair</th>
-            <td>$150–$900</td>
-            <td>Depends on damage</td>
-          </tr>
-        </tbody>
-      </table>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section projects" aria-labelledby="projects-heading">
+    <!-- External link (SEO/credibility) -->
+    <section class="section" aria-labelledby="resources">
+      <h2 id="resources">Helpful Resources</h2>
+      <ul>
+        <li><a href="https://www.w3.org/WAI/" target="_blank" rel="noopener">Web Accessibility Initiative (WAI)</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Kramer Innovation. All rights reserved.</p>
+  </footer>
+</body>
+</html>
