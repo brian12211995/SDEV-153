@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kramer Innovation | Local Landscaping & Home Improvement</title>
+  <title>Kramer Innovation | Landscaping & Home Improvement</title>
+
+  <!-- SEO -->
   <meta name="description" content="Kramer Innovation provides local landscaping, home remodeling, and accessibility upgrades. Building dreams one project at a time.">
+
+  <!-- External CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- Skip link -->
+  <!-- Skip link for accessibility -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Header -->
+  <!-- HEADER -->
   <header class="site-header">
     <div class="logo">
       <span class="logo-main">KRAMER</span>
@@ -21,96 +25,97 @@
 
     <nav class="site-nav" aria-label="Main navigation">
       <ul>
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects.html">Our Projects</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#main-content" aria-current="page">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Our Projects</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Main -->
+  <!-- MAIN -->
   <main id="main-content">
 
-    <!-- Hero -->
+    <!-- HERO -->
     <section class="hero" aria-labelledby="hero-heading">
       <p class="hero-kicker">KRAMER INNOVATION</p>
       <h1 id="hero-heading">Building dreams one project at a time</h1>
 
       <p>
-        Growing up in a small town taught me that reputation matters. I take pride
-        in helping neighbors improve their homes and yards through honest work
-        and attention to detail.
+        Growing up in a small town taught me that hard work and reputation matter.
+        Kramer Innovation was built on helping neighbors improve their homes and
+        outdoor spaces with honest, reliable craftsmanship.
       </p>
 
       <p>
-        From mowing lawns and installing flower beds to building decks and handling
-        weekend repair projects, every job is personal — because these aren’t just
-        customers, they’re neighbors.
+        From lawn care and landscaping to decks, remodels, and accessibility upgrades,
+        every project is handled with pride and attention to detail.
       </p>
     </section>
 
-    <!-- About -->
-    <section class="section">
-      <h2>Why Choose Kramer Innovation?</h2>
+    <!-- SERVICES -->
+    <section id="services" class="section services" aria-labelledby="services-heading">
+      <h2 id="services-heading">Services</h2>
 
       <div class="card-grid">
         <article class="card">
-          <h3>Local & Reliable</h3>
-          <p>
-            We live and work in the same community. That means dependable service
-            and pride in every project.
-          </p>
+          <h3>Landscaping</h3>
+          <ul>
+            <li>Lawn mowing and trimming</li>
+            <li>Mulch and flower bed installs</li>
+            <li>Seasonal clean-ups</li>
+          </ul>
         </article>
 
         <article class="card">
-          <h3>Quality Craftsmanship</h3>
-          <p>
-            From outdoor work to remodeling, we focus on clean results that last.
-          </p>
+          <h3>Home Remodeling</h3>
+          <ul>
+            <li>Deck and patio builds</li>
+            <li>Interior repairs</li>
+            <li>Basement refreshes</li>
+          </ul>
         </article>
 
         <article class="card">
           <h3>Inclusive Design</h3>
-          <p>
-            We create spaces that are safe, accessible, and comfortable for everyone.
-          </p>
+          <ul>
+            <li>Accessibility ramps</li>
+            <li>Handrails and safety upgrades</li>
+            <li>Low-maintenance designs</li>
+          </ul>
         </article>
       </div>
+
+      <!-- REQUIRED TABLE -->
+      <table>
+        <caption>Sample Pricing Estimates</caption>
+        <thead>
+          <tr>
+            <th scope="col">Service</th>
+            <th scope="col">Typical Cost</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Lawn Mowing</th>
+            <td>$40–$80</td>
+            <td>Based on yard size</td>
+          </tr>
+          <tr>
+            <th scope="row">Mulch Install</th>
+            <td>$200–$600</td>
+            <td>Includes materials</td>
+          </tr>
+          <tr>
+            <th scope="row">Deck Repair</th>
+            <td>$150–$900</td>
+            <td>Depends on damage</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
-    <!-- External Links -->
-    <section class="section">
-      <h2>Connect With Us</h2>
-      <ul>
-        <li>
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener">
-            Visit us on Facebook
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener">
-            Follow us on Instagram
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/brian12211995" target="_blank" rel="noopener">
-            View our GitHub projects
-          </a>
-        </li>
-      </ul>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Kramer Innovation. All rights reserved.</p>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects" aria-labelledby="projects-heading">
